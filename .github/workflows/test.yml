@@ -34,21 +34,3 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
-
-
-# on: push
-
-# jobs:
-#   build:
-#     name: Test
-#     runs-on: macos-latest
-#     steps:
-#       - uses: actions/checkout@v1
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: '14.x'
-#       - run: npm install
-#       - run: npm test
-#       - run: npm run build
-#       - run: docker image build -t react-tetris-image:0.0.1 .
-#       - run: docker push guckguck/react-tetris-image:0.0.1
